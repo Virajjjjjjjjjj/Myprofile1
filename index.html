@@ -1,1 +1,225 @@
-<h1> Hello world </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viraj Pamale | Profile</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #e2e8f0;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+    .container {
+      width: min(1000px, 92%);
+      margin: 40px auto;
+    }
+    .profile-card {
+      background: rgba(15, 23, 42, 0.92);
+      border: 1px solid #334155;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0,0,0,.35);
+    }
+    .hero {
+      padding: 55px 40px;
+      text-align: center;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+    }
+    .avatar {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      font-size: 42px;
+      font-weight: bold;
+      color: white;
+      background: rgba(255,255,255,.18);
+      border: 3px solid rgba(255,255,255,.7);
+    }
+    .hero h1 { font-size: clamp(32px, 6vw, 52px); }
+    .hero p { margin-top: 8px; font-size: 18px; opacity: .9; }
+    .content { padding: 35px; }
+    .section { margin-bottom: 32px; }
+    .section h2 {
+      font-size: 24px;
+      margin-bottom: 14px;
+      color: #93c5fd;
+    }
+    .about {
+      font-size: 17px;
+      color: #cbd5e1;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .info, .skill, .project {
+      padding: 20px;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+    }
+    .info strong { color: #93c5fd; display: block; margin-bottom: 4px; }
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .skill {
+      padding: 10px 15px;
+      border-radius: 999px;
+      background: #172554;
+      border-color: #1d4ed8;
+    }
+    .projects {
+      display: grid;
+      gap: 14px;
+    }
+    .project h3 { color: #bfdbfe; margin-bottom: 5px; }
+    .project p { color: #cbd5e1; }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 24px;
+    }
+    button {
+      border: 0;
+      padding: 12px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: bold;
+      background: white;
+      color: #1e293b;
+    }
+    button:hover { transform: translateY(-2px); }
+    footer {
+      text-align: center;
+      padding: 25px;
+      color: #94a3b8;
+      border-top: 1px solid #334155;
+    }
+    #message {
+      margin-top: 14px;
+      text-align: center;
+      color: #86efac;
+      min-height: 24px;
+    }
+    @media (max-width: 650px) {
+      .content { padding: 22px; }
+      .hero { padding: 40px 20px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <div class="profile-card">
+
+      <section class="hero">
+        <div class="avatar">VP</div>
+        <h1>Viraj Pamale</h1>
+        <p>Computer Engineering Student • Java • DSA • Web Development</p>
+
+        <div class="buttons">
+          <button onclick="showMessage()">Say Hello</button>
+          <button onclick="window.print()">Print Profile</button>
+        </div>
+        <div id="message"></div>
+      </section>
+
+      <div class="content">
+
+        <section class="section">
+          <h2>About Me</h2>
+          <p class="about">
+            Hello! I'm Viraj Pamale, a Computer Engineering student with a
+            Diploma background in Computer Engineering. I enjoy learning
+            programming, solving coding problems, and building practical
+            software projects. I am currently strengthening my skills in
+            Java, C/C++, JavaScript, DSA, DBMS, and web development.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Education</h2>
+          <div class="grid">
+            <div class="info">
+              <strong>Field</strong>
+              Computer Engineering
+            </div>
+            <div class="info">
+              <strong>Qualification</strong>
+              Diploma in Computer Engineering after 10th
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Skills</h2>
+          <div class="skills">
+            <div class="skill">Java</div>
+            <div class="skill">C</div>
+            <div class="skill">C++</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">DSA</div>
+            <div class="skill">DBMS</div>
+            <div class="skill">MySQL</div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Projects & Interests</h2>
+          <div class="projects">
+            <div class="project">
+              <h3>Employee Management System</h3>
+              <p>A database-oriented project for storing and managing employee information using SQL and DBMS concepts.</p>
+            </div>
+            <div class="project">
+              <h3>Java Programming</h3>
+              <p>Practicing Java fundamentals, OOP, inheritance, user input, and console-based programs.</p>
+            </div>
+            <div class="project">
+              <h3>DSA & Coding Practice</h3>
+              <p>Working on arrays, algorithms, data structures, and coding problems to improve problem-solving skills.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>Career Goal</h2>
+          <p class="about">
+            My goal is to become a skilled software developer by continuously
+            improving my programming, problem-solving, database, and web
+            development skills.
+          </p>
+        </section>
+
+      </div>
+
+      <footer>
+        © 2026 Viraj Pamale • Personal Profile
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").textContent =
+        "Thanks for visiting my profile!";
+    }
+  </script>
+</body>
+</html>
